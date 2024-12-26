@@ -1,0 +1,20 @@
+{
+  "name": "clase1",
+  "version": "1.0.0",
+  "description": "practicas en clase",
+  "main": "personajes.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Harold-ux/Back-1-72855.git"
+  },
+  "author": "Harold Díaz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Harold-ux/Back-1-72855/issues"
+  },
+  "homepage": "https://github.com/Harold-ux/Back-1-72855#readme"
+}
