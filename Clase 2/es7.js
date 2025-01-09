@@ -1,4 +1,6 @@
-/* ES7 exponencial */
+/* ES7  */
+
+/* exponencial */
 
 /* exponente = 3;
 
