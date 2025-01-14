@@ -57,9 +57,9 @@ run(); */
 
 // borrar con promesa
 
-/* import fs from "fs/promises";
+import fs from "fs/promises";
 
-const path = "./data/practica_fs";
+const path = "./data/carts.manager.js";
 const data = JSON.stringify([
   { Instancia: "Productos hechos con try/catch" },
   { product: 1 },
@@ -76,4 +76,3 @@ async function borrarArchivo() {
 }
 
 borrarArchivo();
- */

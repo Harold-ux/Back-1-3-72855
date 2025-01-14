@@ -1,4 +1,4 @@
-import { faker } from "@faker-js/faker";
+/* import { faker } from "@faker-js/faker";
 
 class ProductsManager {
   #all = [];
@@ -55,3 +55,4 @@ class ProductsManager {
 const productsManager = new ProductsManager();
 
 export default productsManager;
+ */

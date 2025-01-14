@@ -1,0 +1,42 @@
+[
+  {
+    "_id": "a24fbafb9b83eee1d8617aae",
+    "title": "Handcrafted Plastic Fish",
+    "price": "312.05",
+    "stock": 468,
+    "photo": "https://picsum.photos/seed/MpvH0Q9MCf/2107/834",
+    "category": "ninguna"
+  },
+  {
+    "_id": "55fbe6feaa4afefcb5883d93",
+    "title": "Elegant Steel Chips",
+    "price": "217.25",
+    "stock": 410,
+    "photo": "https://picsum.photos/seed/IpzXoDa/2512/3842",
+    "category": "accesorios"
+  },
+  {
+    "_id": "cfd90ebd1f86eb3ad1c0e53a",
+    "title": "Small Frozen Table",
+    "price": "118.89",
+    "stock": 419,
+    "photo": "https://loremflickr.com/1892/222?lock=8254033297025783",
+    "category": "ninguna"
+  },
+  {
+    "_id": "9dbad21d94bab13e019ab6c0",
+    "title": "Rustic Cotton Keyboard",
+    "price": "171.29",
+    "stock": 971,
+    "photo": "https://picsum.photos/seed/8cmpvRXd/2288/3830",
+    "category": "accesorios"
+  },
+  {
+    "_id": "f0f6a69f9fcabbaa934fd0d0",
+    "title": "Modern Plastic Salad",
+    "price": "470.69",
+    "stock": 551,
+    "photo": "https://picsum.photos/seed/qyp6Y/3976/675",
+    "category": "celulares"
+  }
+]
