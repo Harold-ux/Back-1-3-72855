@@ -151,9 +151,9 @@ class ProductsManager {
       const all = await this.read();
       const index = all.findIndex((each) => each._id === id);
       if (index === -1) {
-        return { error: "Not found!" };
+        return null;
       }
-      const deleted = all.splice(index, 1);
+      const [deleted] = all.splice(index, 1);
       await this.write(all);
       return deleted;
     } catch (error) {

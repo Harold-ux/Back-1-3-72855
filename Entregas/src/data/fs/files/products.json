@@ -11,7 +11,7 @@
     "_id": "55fbe6feaa4afefcb5883d93",
     "title": "Elegant Steel Chips",
     "price": "217.25",
-    "stock": 410,
+    "stock": 610,
     "photo": "https://picsum.photos/seed/IpzXoDa/2512/3842",
     "category": "accesorios"
   },
@@ -87,4 +87,4 @@
     "photo": "https://picsum.photos/seed/8cmpvRXd/2288/3830",
     "category": "accesorios"
   }
-]
+] 
