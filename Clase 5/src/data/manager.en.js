@@ -6,7 +6,6 @@
 
 import { faker } from "@faker-js/faker";
 import fs from "fs/promises";
-import path from "path";
 
 class Manager {
   constructor(model, path) {
