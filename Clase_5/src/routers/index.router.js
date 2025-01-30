@@ -1,13 +1,15 @@
-// Importación de módulos
 import { Router } from "express";
 import apiRouter from "./api/index.api.js";
+import viewsRouter from "./views.router.js";
 import productsManager from "../data/fs/products.en.js";
 
 // Creación del router
 const router = Router();
 
 // Middleware que conecta otras rutas desde `index.api.js`
+router.use("/", viewsRouter);
 router.use("/api", apiRouter);
+
 
 // Ruta para obtener la lista de productos
 const listProducts = async (req, res) => {
