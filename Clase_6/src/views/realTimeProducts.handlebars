@@ -1,0 +1,35 @@
+<h1 class="text-center">Real-Time Products</h1>
+
+<!-- Formulario para agregar productos -->
+<form id="addProductForm" class="mb-4">
+  <div class="mb-3">
+    <label for="title" class="form-label">Product Name</label>
+    <input type="text" class="form-control" id="title" required>
+  </div>
+  <div class="mb-3">
+    <label for="price" class="form-label">Price</label>
+    <input type="number" class="form-control" id="price" required>
+  </div>
+  <div class="mb-3">
+    <label for="stock" class="form-label">Stock</label>
+    <input type="number" class="form-control" id="stock" required>
+  </div>
+  <button type="submit" class="btn btn-success">Add Product</button>
+</form>
+
+<!-- Lista de productos actualizable en tiempo real -->
+<section id="productList">
+  {{#each products}}
+    <div class="card product-card" style="width: 18rem;" data-id="{{this._id}}">
+      <img src="{{this.image}}" class="card-img-top" alt="Product Image">
+      <div class="card-body">
+        <h5 class="card-title">{{this.title}}</h5>
+        <p class="card-text">💲 {{this.price}} - 📦 Stock: {{this.stock}}</p>
+        <button class="btn btn-danger delete-btn" data-id="{{this._id}}">Delete</button>
+      </div>
+    </div>
+  {{/each}}
+</section>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/realtimeproducts.js"></script>
