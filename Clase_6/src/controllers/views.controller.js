@@ -5,7 +5,8 @@ const indexView = async (req, res, next) => {
     const all = await productsManager.readAll();
     const data = {
       title: "Home",
-      message: "Welcome to my site!",
+      message: "WELCOME BACKend!",
+      class: "home",
       products: all,
     };
     res.status(200).render("index", data);

@@ -94,11 +94,5 @@
     "stock": 340,
     "photo": "https://picsum.photos/seed/Amffs3/3595/3288",
     "category": "celulares"
-  },
-  {
-    "_id": "7d915cd3c7ea8fffbaf5e8b5",
-    "title": "Zapatos",
-    "price": "145",
-    "stock": "4"
   }
 ]

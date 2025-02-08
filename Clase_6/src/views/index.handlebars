@@ -1,10 +1,11 @@
 <div class="message-container">
   <p>{{message}}</p>
 </div>
-
-<section>
+<div class="real-time"><a href="/realTimeProducts">
+    Go to Real-Time Render</a></div>
+<section class="products-real">
   {{#each products}}
-    <div class="card" style="width: 18rem;">
+    <div class="card" style="width: 18rem;" data-id="{{this._id}}">
       {{#if this.photo}}
         <img src="{{this.photo}}" class="card-img-top" alt="..." />
       {{else}}
@@ -22,11 +23,11 @@
         </div>
         <div class="button-container">
           <a href="/product/{{this._id}}" class="button">View more</a>
+          <button class="button" data-id="{{this._id}}"> Delete</button>
         </div>
       </div>
     </div>
   {{/each}}
 </section>
-
 
 <script src="/index.js"></script>

@@ -19,30 +19,45 @@ const port = 8080;
 
 // WebSocket
 io.on("connection", async (socket) => {
-  console.log("Nuevo usuario conectado");
+  try {
+    console.log("Nuevo usuario conectado");
+    // Emitir la lista de productos al cliente recién conectado
+    socket.emit("updateProducts", await productsManager.readAll());
 
-  // Enviar la lista de productos al conectar
-  socket.emit("updateProducts", await productsManager.readAll());
+    // Evento para agregar un producto
+    socket.on("addProduct", async (productData) => {
+      if (!productData.image) {
+        productData.image =
+          "https://img.freepik.com/vector-premium/vector-icono-imagen-predeterminado-pagina-imagen-faltante-diseno-sitio-web-o-aplicacion-movil-no-hay-foto-disponible_87543-11093.jpg"; // Imagen por defecto
+      }
+      await productsManager.create(productData);
+      // Actualizar la lista de productos a todos los clientes conectados
+      io.emit("updateProducts", await productsManager.readAll());
+    });
 
-  // Agregar un producto
-  socket.on("addProduct", async (productData) => {
-    if (!productData.image) {
-      productData.image =
-        "https://img.freepik.com/vector-premium/vector-icono-imagen-predeterminado-pagina-imagen-faltante-diseno-sitio-web-o-aplicacion-movil-no-hay-foto-disponible_87543-11093.jpg"; // Imagen por defecto
-    }
-    await productsManager.create(productData);
-    io.emit("updateProducts", await productsManager.readAll());
-  });
+    // Evento para eliminar un producto
+    socket.on("deleteProduct", async (productId) => {
+      try {
+        const deleted = await productsManager.deleteOne(productId);
+        if (!deleted) {
+          console.log(`Producto con ID ${productId} no encontrado`);
+          return;
+        }
+        // Actualizar la lista de productos a todos los clientes conectados
+        io.emit("updateProducts", await productsManager.readAll());
+      } catch (error) {
+        console.error("Error al eliminar el producto:", error);
+      }
+    });
 
-  // Eliminar un producto
-  socket.on("deleteProduct", async (productId) => {
-    await productsManager.delete(productId);
-    io.emit("updateProducts", await productsManager.readAll());
-  });
+    socket.on("disconnect", () => {
+      console.log("Usuario desconectado");
+    });
 
-  socket.on("disconnect", () => {
-    console.log("Usuario desconectado");
-  });
+  } catch (error) {
+    console.error("Error al conectar WebSocket:", error);
+    socket.emit("error", "No se pudieron cargar los productos.");
+  }
 });
 
 // Configuración del motor de plantillas Handlebars

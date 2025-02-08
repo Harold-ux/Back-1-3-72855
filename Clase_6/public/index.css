@@ -4,7 +4,7 @@
     align-items: center;
     text-align: center;
     margin: 80px 0;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: #333;
 }
 
@@ -132,7 +132,7 @@ section {
 }
 
 .product-container {
-    margin-top: 80px;
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -140,6 +140,7 @@ section {
     gap: 20px;
     padding: 20px;
 }
+
 
 .button {
     display: flex;
@@ -153,6 +154,9 @@ section {
     text-align: center;
     width: auto;
     transition: background-color 0.3s ease;
+    margin: 5px;
+    border: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .button:hover {
@@ -162,7 +166,7 @@ section {
 .button-container {
     display: flex;
     flex-direction: column;
-    margin: 10px;
+    margin: 25px;
 }
 
 .not-found {
@@ -170,6 +174,58 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 25px;
+    gap: 45px;
     margin: 45px;
+}
+
+.real-container {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+
+}
+
+.real-time {
+    background-color: #d3d3d3bf;
+    padding: 5px 15px;
+    border-radius: 8px;
+    color: #740909;
+    font-size: 16px;
+    text-decoration: none;
+    text-align: center;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.real-time a {
+    text-decoration: none;
+    color: #740909;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.real-time:hover {
+    background-color: #b0b0b0;
+}
+
+.text-center {
+    margin: 100px;
+
+}
+
+.btn-success {
+    margin-bottom: 80px;
+}
+
+.products-real {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 80px;
+    padding: 45px;
+}
+
+.container-fluid {
+    margin-left: 5%;
+    gap: 80%;
 }

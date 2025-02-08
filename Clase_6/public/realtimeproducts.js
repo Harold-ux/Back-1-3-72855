@@ -46,12 +46,14 @@ socket.on("updateProducts", (products) => {
 
         productList.appendChild(productCard);
     });
+});
 
-    // Agregar evento a los botones de eliminar
-    document.querySelectorAll(".delete-btn").forEach((button) => {
-        button.addEventListener("click", () => {
-            const productId = button.dataset.id;
+// 🔴 Mejor manera: Event Delegation para evitar múltiples event listeners
+document.addEventListener("click", (event) => {
+    if (event.target.classList.contains("delete-btn")) {
+        const productId = event.target.dataset.id;
+        if (confirm("¿Seguro que quieres eliminar este producto?")) {
             socket.emit("deleteProduct", productId);
-        });
-    });
+        }
+    }
 });
